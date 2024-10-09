@@ -65,7 +65,7 @@ console.log(hasKey(movies[0], "title"));
   and iterates through it to print the titles of all the movies.
   ********************************/
 const movieTitle = (movieList) => {
-  const titles = movieList.map((movies) => movies.title);
+  const titles = movieList.map((movies) => console.log(movies.title));
   return titles;
 };
 console.log(movieTitle(movies));
