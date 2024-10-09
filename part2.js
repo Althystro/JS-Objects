@@ -159,15 +159,13 @@ console.log(listAllCourses(students));
     { id: 7, name: 'Grace', courses: [ 'Math', 'English', 'Music' ] }
     **********/
 
-// function removeCourseFromStudent(student, course) {
-//   student.courses.splice(1, 1);
-//   console.log(student.courses);
-//   //const removedCourse = student.courses.includes(course);
-//   //console.log(removedCourse);
-//   //return removedCourse;
-//   return students;
-// }
-// console.log(removeCourseFromStudent(students[6], "Science"));
+function removeCourseFromStudent(student, course) {
+  student.courses.splice(1, 1);
+  console.log(student.courses);
+
+  return students;
+}
+console.log(removeCourseFromStudent(students[6], "Science"));
 
 /**********
     Question 7:
