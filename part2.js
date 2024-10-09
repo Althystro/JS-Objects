@@ -160,12 +160,17 @@ console.log(listAllCourses(students));
     **********/
 
 function removeCourseFromStudent(student, course) {
-  student.courses.splice(1, 1);
-  console.log(student.courses);
+  const courseIndex = student.courses.indexOf(course);
 
-  return students;
+  if (courseIndex !== -1) {
+    student.courses.splice(courseIndex, 1);
+  }
+  return student;
 }
+console.log(">>>>>>>>>>>>>>>>>>>>>>>>>");
+
 console.log(removeCourseFromStudent(students[6], "Science"));
+console.log(">>>>>>>>>>>>>>>>>>>>>>>>>");
 
 /**********
     Question 7:
@@ -180,9 +185,12 @@ console.log(removeCourseFromStudent(students[6], "Science"));
 function findStudentById(studentId, students) {
   const studentById = students.filter((student) => student.id === studentId);
   console.log(studentById);
+  console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+  return studentById;
 }
 
 console.log(findStudentById(10, students));
+console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 
 /**********
     Question 8: 🌶️🌶️🌶️
