@@ -224,6 +224,23 @@ console.log(removeCarById(cars, 404));
     **********/
 
 function updateCarColor(cars, id, newColor) {
-  // Your code here
+  const car = cars
+    .filter((car) => car.id === id)
+    .map((car) => {
+      car.color = newColor;
+      return car;
+    });
+
+  return car.length > 0 ? car[0] : "No Car Found";
 }
-// console.log(updateCarColor(cars, 401, "Yellow"));
+
+// const car = cars.find((car) => car.id === id);
+
+// if (car) {
+//   car.color = newColor;
+//   return car;
+// } else {
+//   return "No Car Found";
+// }
+
+console.log(updateCarColor(cars, 401, "Yellow"));
